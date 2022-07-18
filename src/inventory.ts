@@ -6,7 +6,7 @@ const inventory: InventoryItem[] = [
   { product: { name: "LED", price: 1.0 }, quantity: 20 },
 ];
 
-const calcInventoryValue = (array: InventoryItem[]): number => {
+export const calcInventoryValue = (array: InventoryItem[]): number => {
   if (array.length) {
     return array.reduce((pv, cv) => {
       return pv + cv.product.price * cv.quantity;
